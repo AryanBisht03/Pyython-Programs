@@ -1,9 +1,13 @@
 print("Enter your height")
 Height=input()
+
+#nested if else satement.
+#this will check whether a person is above 120 cm or not
 if float(Height)>=120:
   print("You can ride!")
   print("Enter your age")
   age=int(input())
+  #nested loop, which will find the age group and based on it ,it will provide the bill.
   if age>18:
     print("Your ticket cost is $12")
   else:
