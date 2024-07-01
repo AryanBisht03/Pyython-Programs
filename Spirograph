@@ -1,0 +1,39 @@
+import turtle
+from turtle import Turtle,Screen
+import random
+
+tim_the_turtle=Turtle()
+tim_the_turtle.shape("turtle")
+tim_the_turtle.hideturtle()
+
+#coloring
+turtle.colormode(255)
+
+
+def random_color():
+    r = random.randint(0,255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    color=(r,g,b)
+    return color
+
+
+tim_the_turtle.speed("fastest")
+#not a good way to draw
+# radius=100
+# for _ in range(10000):
+#     print(tim_the_turtle.heading())
+#     tim_the_turtle.setheading(tim_the_turtle.heading() + 10)
+#     tim_the_turtle.color(random_color())
+#     tim_the_turtle.circle(radius)
+
+radius=100
+def spirograpgh(size_of_gap):
+    for _ in range(int(360/size_of_gap)):
+        tim_the_turtle.setheading(tim_the_turtle.heading() + size_of_gap)
+        tim_the_turtle.color(random_color())
+        tim_the_turtle.circle(radius)
+
+spirograpgh(1)
+screen=Screen()
+screen.exitonclick()
